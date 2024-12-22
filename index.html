@@ -58,53 +58,98 @@
       color: #FF69B4; /* Pink on hover */
     }
 
-    /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #111;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    }
+/* Header Styling */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box; /* Ensures proper padding handling */
+}
 
-    .logo h3 {
-      font-size: 24px;
-      color: #00FFFF;
-      margin: 0;
-    }
+/* Logo Styling */
+.logo h3 {
+  font-size: 28px;
+  color: #00FFFF;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+/* Navigation Menu Styling */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-    nav a {
-      font-size: 16px;
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
-    nav a:hover {
-      background-color: #333;
-    }
+.nav-menu a:hover {
+  background: #FF69B4;
+  color: #000;
+  transform: scale(1.1);
+}
 
-    .contact-button {
-      background: linear-gradient(45deg, #00FFFF, #FF69B4);
-      color: #000;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
+/* Contact Button Styling */
+.contact-button {
+  background: linear-gradient(45deg, #00FFFF, #FF69B4);
+  color: #000;
+  border: none;
+  padding: 12px 24px; /* Increased padding for better visibility */
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap; /* Prevents text wrapping */
+}
 
-    .contact-button:hover {
-      transform: scale(1.1);
-    }
+.contact-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Adjust Header Height */
+.main-header {
+  height: auto; /* Ensures the height adjusts dynamically */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .contact-button {
+    align-self: flex-start;
+    margin-top: 10px; /* Add margin for better spacing on mobile */
+  }
+}
+
+
 
 /* About Section Styling */
 .about {
@@ -516,18 +561,160 @@
     font-size: 28px;
   }
 }
+/* Upcoming Projects Section */
+.upcoming-projects {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1a1a1a, #000000);
+  color: #fff;
+  text-align: center;
+}
 
-    /* Footer */
-    footer {
-      background-color: #111;
-      padding: 20px;
-      text-align: center;
-    }
+.section-title {
+  font-size: 36px;
+  color: #00FFFF;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 40px;
+  position: relative;
+}
 
-    footer p {
-      color: #666;
-      font-size: 14px;
-    }
+.section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #FF69B4;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.upcoming-projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Box */
+.project-box {
+  background: #111;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-box h3 {
+  font-size: 24px;
+  color: #FF69B4;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.project-box p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .upcoming-projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+}
+
+.footer-container div {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer h3 {
+  font-size: 20px;
+  color: #00FFFF;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin: 8px 0;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #FF69B4;
+}
+
+.footer-social ul li a i {
+  margin-right: 8px;
+}
+
+.footer-location p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #333;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container div {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
+
 
     /* Scroll to Top Button */
     #scrollToTopBtn {
@@ -568,19 +755,20 @@
 </head>
 
 <body>
-  <header>
+  <header class="main-header">
     <div class="logo">
       <h3>G.K.R</h3>
     </div>
-    <nav>
+    <nav class="nav-menu">
       <a href="#about">About Me</a>
       <a href="#skills">Skills</a>
       <a href="#work-history">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#upcoming-projects">Incubators</a>
       <button class="contact-button" onclick="window.open('https://www.linkedin.com/in/karthikreddygillela/')">Contact Me</button>
     </nav>
   </header>
-
+  
   <section class="about" id="about">
     <div class="about-wrapper">
       <!-- Diagonal Background -->
@@ -793,11 +981,60 @@
     </div>
   </section>
   
+  <section class="upcoming-projects" id="upcoming-projects">
+    <h2 class="section-title">incubators</h2>
+    <div class="upcoming-projects-container">
+      <div class="project-box">
+        <h3>Next-Gen E-Learning</h3>
+        <p>Revolutionizing the education industry with innovative and scalable solutions.</p>
+      </div>
+      <div class="project-box">
+        <h3>Social Networking</h3>
+        <p>Creating a secure and engaging platform for anonymous and authentic interactions.</p>
+      </div>
+      <div class="project-box">
+        <h3>E-Commerce</h3>
+        <p>Redefining the retail industry with next-level online shopping experiences.</p>
+      </div>
+    </div>
+  </section>
   
 
-  <footer>
-    <p>&copy; 2025 KarthikreddyGillela. All rights reserved.</p>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Navigation -->
+      <div class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#work-history">Experience</a></li>
+          <li><a href="#upcoming-projects">Incubators</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social Links -->
+      <div class="footer-social">
+        <h3>Connect with Me</h3>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/karthikreddygillela/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://github.com/karthikreddygillela" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="mailto:karthikreddy381@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+        </ul>
+      </div>
+  
+      <!-- Location -->
+      <div class="footer-location">
+        <h3>Location</h3>
+        <p>Hyderabad, Telangana, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 KarthikreddyGillela. All rights reserved.</p>
+    </div>
   </footer>
+  
 
   <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
