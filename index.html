@@ -4,560 +4,566 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karthikreddygillela</title>
+  <title>Karthikreddy Gillela | DevSecOps/MlOps Architect & System Design Expert</title>
+
+  <!-- Meta Tags for SEO -->
+  <meta name="description" content="Karthikreddy Gillela - A seasoned DevSecOps Architect and System Design Expert with 12+ years of experience in DevOps, Big Data, MLOps, and scalable system design.">
+  <meta name="keywords" content="Karthikreddy Gillela, DevSecOps/MLOps Architect, System Design Expert, DevOps, MLOps, Big Data, Cloud Solutions, Web Application Design, Secure Infrastructure, Kubernetes, Terraform">
+  <meta name="author" content="Karthikreddy Gillela">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="Karthikreddy Gillela | DevSecOps/MLOps Architect & System Design Expert">
+  <meta property="og:description" content="Discover the expertise of Karthikreddy Gillela in DevOps, MLOps, Big Data, and scalable system design.">
+  <meta property="og:image" content="1.jepg">
+  <meta property="og:url" content="https://karthikreddygillela.github.io">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karthikreddy Gillela | DevSecOps/MLOps Architect & System Design Expert">
+  <meta name="twitter:description" content="Showcasing expertise in DevOps, Big Data, MLOps, and scalable system architecture.">
+  <meta name="twitter:image" content="1.jpeg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="1.jpeg" type="image/png">
+
+  <!-- External Fonts and Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
   <style>
-    /* Reset some default styles */
+    /* Global Styles */
     body {
       margin: 0;
       padding: 0;
-      background-color: #000000; /* Black background */
-      color: #ffffff; /* White text color */
-      font-family: Arial, sans-serif; /* Default font family */
-    }
-    /* Header styles */
-    header {
-      background-color: #000000; /* Industry-standard blue color */
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    /* Navigation styles */
-    nav {
-      display: flex;
-      align-items: center;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 18px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: #2980b9; /* Darker blue on hover */
-    }
-
-    /* Main content styles */
-    .container {
-      padding: 50px;
-      max-width: 100%;
-      margin: 0 auto;
-      color: #ffffff;
-      background-color: #000000;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-
-    p {
-      font-size: 18px;
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+      font-family: 'Roboto', sans-serif;
       line-height: 1.6;
     }
 
-    /* About section styles */
-    .about {
-      display: flex; /* Use flexbox for two-column layout */
-      align-items: center; /* Vertically center content */
-      position: relative;
-      text-align: center;
-      padding: 50px;
-      animation: fadeInUp 1s ease;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden; /* Hide overflowing particles */
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
     }
 
-    .about::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      
-      z-index: -1;
-    }
-
-    .profile-image {
-      flex: 0 0 200px; /* Fixed width for profile image column */
-      margin-right: 30px;
-      border: 5px solid #ffffff; /* White border around the profile image */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-      border-radius: 50%; /* Make the profile image circular */
-      overflow: hidden; /* Hide any image overflow */
-    }
-
-    .profile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Maintain aspect ratio and fill the container */
-    }
-
-    .about-content {
-      flex: 1; /* Let the content column take the remaining space */
-      text-align: left;
-    }
-
-    .about-content h2 {
-      font-family: "Arial", sans-serif; /* Change font family for h2 */
-      color: #2c3e50; /* Dark blue color for h2 */
-      font-size: 28px; /* Increase font size for h2 */
-      margin-bottom: 20px; /* Add some spacing below h2 */
-    }
-
-    .about-content p {
-      font-family: "Georgia", serif; /* Change font family for paragraph */
-      color: #333333; /* Darker color for paragraph text */
-      font-size: 18px; /* Adjust font size for better readability */
-      line-height: 1.8; /* Increase line height for better spacing */
-      margin-bottom: 30px; /* Add some margin below the paragraph */
-      background-color: #f9f9f9; /* Add a subtle background color */
-      padding: 20px; /* Add padding for better visual separation */
-    }
-    .particles {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none; /* Prevent particles from capturing clicks */
-    }
-
-    .particle {
-      position: absolute;
-      top: -10px; /* Start particles above the container */
-      width: 6px;
-      height: 6px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
-      animation: particleMove 5s linear infinite; /* Slower animation for more visibility */
-    }
-
-    @keyframes particleMove {
-      0% {
-        transform: translateY(0) translateX(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(calc(100vh + 100px)) translateX(calc(100vw + 100px));
-        opacity: 0;
-      }
-    }
-
-
-    .about h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    /* Skills section styles */
-    .skills {
-      text-align: center;
-      padding: 50px;
-    }
-
-    .skills h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    .skills ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .skills li {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    /* Image section styles */
-    .image-section {
-      text-align: center;
-      padding: 50px;
-    }
-
-    .image-section h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    .image-gallery {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-start; /* Align items from left to right */
-    overflow: hidden; /* Hide any overflowing content */
-    width: 100%; /* Set the width of the gallery container */
-    white-space: nowrap; /* Prevent gallery items from wrapping to the next line */
-    overflow-x: auto; /* Enable horizontal scrolling when needed */
-    
-  }
-
-  .image-item {
-    width: 200px; /* Set the default width for each image container */
-    height: 150px; /* Set the default height for each image container */
-    border-radius: 8px;
-    margin: 10px;
-    box-sizing: border-box;
-  }
-
-  .image-item img {
-    width: 100%; /* Ensures the image takes up the entire container width */
-    height: 100%; /* Ensures the image takes up the entire container height */
-    object-fit: cover; /* Keeps the aspect ratio and covers the entire container */
-    display: block;/* Removes any extra spacing around the image */
-
-  }
-
-  /* Marquee animation keyframes */
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(calc(-100% - 10px)); /* Add 10px spacing for the last item */
-    }
-  }
-    /* Mobile and Tablet Responsiveness */
-    @media screen and (max-width: 768px) {
-    .image-gallery {
-      justify-content: center; /* Center align items for smaller screens */
-    }
-
-    .image-item {
-      width: 80%; /* Set the width to 80% of the container for smaller screens */
-      max-width: 300px; /* Limit the maximum width of the image item */
-      height: auto; /* Allow the height to adjust based on the image aspect ratio */
-    }
-  }
-
-  /* Marquee animation keyframes */
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(calc(-100% - 10px)); /* Add 10px spacing for the last item */
-    }
-  }
-
-    /* Footer styles */
-    footer {
-      background-color: #000000;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* Social icons styles */
-    .social-icons {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
-
-    .social-icons li {
-      margin: 0 10px;
-    }
-
-    .social-icons a {
-      color: #fff;
-      font-size: 24px;
+    a {
+      color: #00FFFF; /* Cyan for links */
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
-    .social-icons a:hover {
-      color: #00a8ff;
+    a:hover {
+      color: #FF69B4; /* Pink on hover */
     }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #111;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo h3 {
+      font-size: 24px;
+      color: #00FFFF;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    .contact-button {
+      background: linear-gradient(45deg, #00FFFF, #FF69B4);
+      color: #000;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-button:hover {
+      transform: scale(1.1);
+    }
+
+/* About Section Styling */
+.about {
+  position: relative;
+  padding: 80px 0;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-diagonal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.about-diagonal::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(135deg, #1a1a1a, #000000);
+  transform: skewY(-4deg);
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.about-content {
+  text-align: left;
+  padding: 20px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  color: #00FFFF;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #00FFFF, #FF69B4);
+  color: #000;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .about-diagonal {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .about-image {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* Skills Section Styling */
+.skills {
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  padding: 50px 20px;
+  color: #fff;
+}
+
+.skills-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  color: #00FFFF;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.skills-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #FF69B4;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.skill-card {
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.skill-header i {
+  font-size: 28px;
+  color: #FF69B4;
+}
+
+.skill-header h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00FFFF;
+  margin: 0;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 8px;
+  border-left: 3px solid #00FFFF;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.skill-card li:hover {
+  background: rgba(0, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+/* Work History Section Styling */
+.work-history {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1a1a1a, #000000);
+  color: #fff;
+}
+
+.work-title {
+  text-align: center;
+  font-size: 36px;
+  color: #00FFFF;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.work-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #FF69B4;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 800px;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+.timeline-icon {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  background: #FF69B4;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content {
+  background: #111;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  color: #00FFFF;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-icon {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* Projects Section */
+.projects {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1a1a1a, #000000);
+  color: #fff;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 36px;
+  color: #00FFFF;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.projects-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #FF69B4;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Ensures all images have a consistent aspect ratio */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container while preserving the aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay Effect */
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+.project-card:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 1;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-title {
+    font-size: 28px;
+  }
+}
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* Scroll to Top Button */
     #scrollToTopBtn {
       display: none;
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #3498db; /* Industry-standard blue color */
-      color: #fff;
+      background: #FF69B4;
+      color: #000;
       border: none;
       border-radius: 50%;
-      font-size: 24px;
       width: 40px;
       height: 40px;
       cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    #scrollToTopBtn i {
-      margin-top: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      font-size: 24px;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease;
     }
 
     #scrollToTopBtn:hover {
-      background-color: #2980b9; /* Darker blue on hover */
-    }
-    /* Two-column layout for Skills section on larger screens */
-    .skills-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; /* Center align items vertically */
+      background: #00FFFF;
     }
 
-    .skills-container .skills-header {
-      flex: 1; /* Take 50% width for header */
-      background-image: url('./skills.jpeg'); /* Add the path to your background image */
-      background-size: cover; /* Scale the image to cover the entire header */
-      background-repeat: no-repeat; /* Prevent the background from repeating */
-      background-position: center center; /* Center the background image */
-      color: #ffffff; /* White text color for header */
-      font-size: 24px; /* Adjust font size for header */
-      border-radius: 8px; /* Rounded corners for the header */
-      padding: 10px; /* Add padding to separate text from the background */
-      height: 400px;
-    }
-
-.skills-container ul {
-    flex: 1; /* Take 50% width for unordered list */
-    display: flex;
-    flex-wrap: wrap; /* Allow the list items to wrap to the next line */
-    list-style: none;
-    padding: 0;
-  }
-
-  .skills-container li {
-    background-color: #1f1f1f; /* Dark gray background for list items */
-    color: #ffffff; /* White text color for list items */
-    font-size: 18px;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 8px; /* Rounded corners for the list items */
-  }
-
-/* Styling for the list of companies */
-.company-details ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-
-.company-details li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-/* Styling for the individual company items */
-.company-icon {
-  font-size: 36px;
-  color: #3498db; /* Icon color */
-  margin-right: 20px;
-}
-
-.company-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.company-name {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.company-year {
-  font-size: 14px;
-  color: #777; /* Year text color */
-}
-
-/* Hover effect */
-.company-item:hover .company-name {
-  color: #3498db; /* Text color on hover */
-}
-
-
-/* Animation for highlighting and moving background */
-@keyframes highlightAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-
-
-
-
-    @media (max-width: 767px) {
-    .skills-container {
-      flex-direction: column; /* Stack items vertically */
-      align-items: stretch; /* Stretch items to fill the container width */
-    }
-
-    .skills-container .skills-header {
-      height: 200px; /* Adjust the height for mobile devices */
-      font-size: 20px; /* Adjust font size for mobile devices */
-    }
-
-    .skills-container ul {
-      margin-top: 20px; /* Add some spacing between header and list */
-    }
-
-    .skills-container li {
-      font-size: 16px; /* Adjust font size for mobile devices */
-    }
-  }
-
-  /* Responsive styles for tablet devices */
-  @media (min-width: 768px) and (max-width: 991px) {
-    .skills-container .skills-header {
-      height: 100px; /* Adjust the height for tablet devices */
-      font-size: 22px; /* Adjust font size for tablet devices */
-    }
-  }
-    /* Media query for responsiveness */
     @media (max-width: 768px) {
-      header {
-        flex-wrap: wrap;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .logo {
-        margin-bottom: 10px;
-      }
-
       nav {
-        margin-top: 10px;
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
       }
 
-      nav a {
-        margin: 5px 0;
-      }
-
-      .main-content {
-        padding: 20px;
-      }
-
-      .container {
-        padding: 30px;
-      }
-
-      .skills ul,
       .image-gallery {
-        padding: 0;
-      }
-
-      .image-item {
-        max-width: 100%;
-      }
-
-      footer {
-        padding: 10px;
+        justify-content: center;
       }
     }
 
-    /* Tablet responsiveness */
-    @media screen and (max-width: 992px) {
-      header {
-        padding: 10px;
-      }
-
-      nav a {
-        padding: 8px 15px;
-        font-size: 16px;
-      }
-
-      .main-content {
-        padding: 40px;
-      }
-
-      .container {
-        padding: 40px;
-      }
-    }
-    @media (max-width: 767px) {
-      .about {
-        flex-direction: column; /* Stack columns vertically on mobile */
-      }
-
-      .profile-image {
-        margin-bottom: 20px; /* Add spacing below profile image on mobile */
-      }
-
-      .about-content p {
-        font-size: 16px; /* Reduce font size for better readability on mobile */
-        line-height: 1.6; /* Reset line height on mobile */
-      }
-    }
-
-    /* Responsive styles for tablet devices */
-    @media (min-width: 768px) and (max-width: 991px) {
-      .about-content p {
-        font-size: 18px; /* Adjust font size for better readability on tablet */
-        line-height: 1.7; /* Adjust line height for better spacing on tablet */
-      }
-    }
-    @media screen and (max-width: 768px) {
-  .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .image-item {
-    width: 45%;
-    margin: 10px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .image-item {
-    width: 90%;
-  }
-}
-
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-    .contact-button {
-      background-color: #3498db; /* Button color */
-      color: #fff; /* Text color */
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease;
-    }
-    
-    .contact-button:hover {
-      background-color: #2980b9; /* Darker blue on hover */
-    }
-
-    /* Position the button */
-    .contact-button-container {
-      margin-left: auto; /* Push the button to the right side of the navbar */
-    }
   </style>
 </head>
 
@@ -569,210 +575,237 @@
     <nav>
       <a href="#about">About Me</a>
       <a href="#skills">Skills</a>
-      <a href="#company-details">Company Details</a>
+      <a href="#work-history">Experience</a>
       <a href="#projects">Projects</a>
-      <!-- Add more sections here and adjust href attributes accordingly -->
-      <div class="contact-button-container">
-        <a class="contact-button" href="https://www.linkedin.com/in/karthikreddygillela/" target="_blank">Contact Me</a>
-      </div>
+      <button class="contact-button" onclick="window.open('https://www.linkedin.com/in/karthikreddygillela/')">Contact Me</button>
     </nav>
-    <ul class="social-icons">
-      <li><a href="https://www.linkedin.com/in/karthikreddygillela/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="https://github.com/karthikreddygillela" target="_blank"><i class="fab fa-github"></i></a></li>
-      <!-- Add more social icons and links as needed -->
-    </ul>
   </header>
 
-  <!-- Main content -->
-  <div class="main-content">
-    <!-- About section -->
-    <section class="about" id="about">
-        <div class="particles">
-          <!-- Particles will be generated dynamically using JavaScript -->
+  <section class="about" id="about">
+    <div class="about-wrapper">
+      <!-- Diagonal Background -->
+      <div class="about-diagonal">
+        <!-- Left Side: Image -->
+        <div class="about-image">
+          <img src="1.jpeg" alt="Profile">
         </div>
-
-        <div class="profile-image">
-            <img src="1.jpeg" alt="Profile Image">
-          </div>
-        <div class="about-container">
+        <!-- Right Side: Content -->
+        <div class="about-content">
           <h2>About Me</h2>
           <p>
-            Hi i'm Karthikreddygillela, I'm a  DevSecOps engineer with over 7+ years of experience in the IT industry. My expertise lies in
-            creating and managing secure and scalable infrastructure for big data applications. I have been involved in a
-            variety of projects, including cloud migration, SRE (Site Reliability Engineering), and system architecture.
-            Through my journey, I've honed my skills in automating processes, ensuring high availability, and optimizing
-            performance to deliver robust solutions.
+            I am a seasoned DevSecOps and MLOps Architect and System Design Expert with over 12 years of experience in creating scalable, secure, and high-performance infrastructures for Big Data, Cloud, and MLOps workflows.
           </p>
           <p>
-            Experienced as a DevSecOps & Bigdata engineer with a demonstrated history of working in the IT field. Skilled in both Linux and Windows environments and Hands-on Experience Most Popular DevOps Tools.
-Experience in setup secure Kubernetes clusters. able to set up infrastructure in the cloud.
-</p>
-<p>
-| Jenkins | GitLabCI | Github Actions | Azure Devops | Terraform | TerraGrunt | Ansible | Docker | Kubernetes | Tanzu | git | Big Data | Cloudera | Python | Shell Script | Django | Html | CSS | JavaScript | Nagios | Splunk | IBM App Scan | AWS | AZURE | GCP | Azure Data Factory | Data Lake| Hadoop| VMware | Netapp | Kafka | 
-
-Motivated Towards DevSecOps Added Tools | Qualys | Tenable.io | Fod | Metasploit | Burpsuite | Nmap | PCI-DSS | NIST |
-
-Observability Tools: AppDynamics | Dynatrace.
-
-Learned to develop web applications with the help of Django Framework related to DevOps automation.
-
-Having Qualys Certified Specialist certification.
+            My journey spans across designing and deploying complex web applications, streamlining DevOps workflows, and building innovative solutions that blend technology with business impact. With entrepreneurial experience, I thrive in delivering results that drive growth and scalability.
           </p>
+          <a href="#projects" class="cta-btn">View My Projects</a>
         </div>
-      </section>
-  </div>
-    <!-- Skills section -->
-    <section class="skills" id="skills">
-      <div class="skills-container">
+      </div>
+    </div>
+  </section>
+  
 
+  
+
+  <section class="skills" id="skills">
+    <h2 class="skills-title">Skills</h2>
+    <div class="skills-container">
+      <!-- DevOps & Cloud Platforms -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <i class="fas fa-cloud"></i>
+          <h3>DevOps & Cloud Platforms</h3>
+        </div>
         <ul>
-          <li>Infrastructure as Code (IaC) - Terraform</li>
-          <li>Continuous Integration/Continuous Deployment (CI/CD) - Jenkins, github Actions, Gitlab</li>
-          <li>Containerization - Docker, Kubernetes</li>
-          <li>Cloud Platforms - AWS, Azure, Google Cloud</li>
-          <li>Security - SSL, Firewalls, IDS/IPS</li>
-          <li>Big Data Tools - Hadoop, Spark</li>
-          <li>Scripting - Python, Bash</li>
-          <li>Security - Qualys, tenable</li>
-          <li>AI/ML</li>
+          <li>Jenkins, GitLabCI, GitHub Actions, Azure DevOps</li>
+          <li>Terraform, TerraGrunt, Ansible</li>
+          <li>Docker, Kubernetes, Tanzu</li>
+          <li>AWS, Azure, GCP</li>
+          <li>Cloudera, Hadoop, Data Lake</li>
+          <li>Git</li>
         </ul>
-        <div class="skills-header">
-            <h2>Skills</h2>
-          </div>
       </div>
-    </section>
-
-<!-- Company Details section -->
-<section class="company-details" id="company-details">
-  <div class="container">
-    <h2>Company Details</h2>
-    <p>
-      I have had the privilege to work with several renowned companies, where I contributed to various projects and gained valuable experience. Here are some highlights from my career:
-    </p>
-    <ul class="company-list">
-      <li class="company-item">
-        <div class="company-icon"><i class="fas fa-building"></i></div>
-        <div class="company-info">
-          <div class="company-name">Publicis Sapient</strong> - Senior Engineer</div>
-          <div class="company-year">2023 - Present</div>
+      <!-- Development Skills -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <i class="fas fa-code"></i>
+          <h3>Development Skills</h3>
         </div>
-      </li>
-      <li class="company-item">
-        <div class="company-icon"><i class="fas fa-building"></i></div>
-        <div class="company-info">
-          <div class="company-name">Consilio India Pvt.Ltd</strong> - Senior Engineer</div>
-          <div class="company-year">2021 - 2023</div>
+        <ul>
+          <li>Python, Shell Script</li>
+          <li>Django Framework</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>MySQL, PostgreSQL, NetApp</li>
+        </ul>
+      </div>
+      <!-- DevSecOps & Security -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <i class="fas fa-shield-alt"></i>
+          <h3>DevSecOps & Security</h3>
         </div>
-      </li>
-      <li class="company-item">
-        <div class="company-icon"><i class="fas fa-building"></i></div>
-        <div class="company-info">
-          <div class="company-name"><strong>Wipro LTD.</strong> - Senior Project Engineer</div>
-          <div class="company-year">2019 - 2021</div>
+        <ul>
+          <li>Qualys, Tenable.io, Fortify on Demand (FoD)</li>
+          <li>Metasploit, Burp Suite, Nmap</li>
+          <li>PCI-DSS, NIST Compliance</li>
+          <li>IBM AppScan, Splunk</li>
+          <li>Secure Kubernetes Cluster Setup</li>
+        </ul>
+      </div>
+      <!-- Observability Tools -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <i class="fas fa-eye"></i>
+          <h3>Observability Tools</h3>
         </div>
-      </li>
-      <li class="company-item">
-        <div class="company-icon"><i class="fas fa-building"></i></div>
-        <div class="company-info">
-          <div class="company-name"><strong>MaheshWari Megaventures Ltd</strong> - Linux Administrator</div>
-          <div class="company-year">2016 - 2019</div>
+        <ul>
+          <li>AppDynamics</li>
+          <li>Dynatrace</li>
+          <li>Nagios</li>
+          <li>Splunk</li>
+          <li>Thoused Eyes</li>
+          <li>New Relic</li>
+        </ul>
+      </div>
+      <!-- AIOps/MLOps -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <i class="fas fa-brain"></i>
+          <h3>AIOps/MLOps</h3>
         </div>
-      </li>
-      <!-- Add more company details as needed -->
-    </ul>
-  </div>
-</section>
-
-
-    <!-- Image section -->
-    <section class="image-section" id="projects"">
-      <div class="container">
-        <h2>My Projects</h2>
-        <div class="image-gallery">
-          <img class="image-item" src="./project1.png" alt="Project 1">
-          <img class="image-item" src="./project2.jpg" alt="Project 2">
-          <img class="image-item" src="./project3.jpeg" alt="Project 3">
-          <img class="image-item" src="./project4.png" alt="Project 4">
-          <img class="image-item" src="./project5.png" alt="Project 5">
-          <img class="image-item" src="./project6.png" alt="Project 6">
+        <ul>
+          <li>MLFlow, AWS SageMaker, GCP Vertex AI</li>
+          <li>RunAI, GenAI, Snorkel</li>
+          <li>H2O Driverless AI, AutoSys</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <section class="work-history" id="work-history">
+    <h2 class="work-title">Work History</h2>
+    <div class="timeline">
+      <!-- Job 1 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>Wells Fargo</h3>
+          <p><strong>Role:</strong> Assistant vice president - SSE</p>
+          <p><strong>Duration:</strong> 2024 - Present</p>
+          <p>Contributed to enterprise-scale MLOps initiatives. Designing and implmentening Mlops workflows.</p>
         </div>
       </div>
-    </section>
-    
-  </div>
-  <button id="scrollToTopBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+      <!-- Job 2 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>Publicis Sapient</h3>
+          <p><strong>Role:</strong> Senior Engineer</p>
+          <p><strong>Duration:</strong> 2023 - 2024</p>
+          <p>Contributed to enterprise-scale DevSecOps and MLOps initiatives, focusing on secure infrastructure and automated workflows.</p>
+        </div>
+      </div>
+      <!-- Job 3 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>Consilio India Pvt. Ltd.</h3>
+          <p><strong>Role:</strong> Senior Software Engineer</p>
+          <p><strong>Duration:</strong> 2021 - 2023</p>
+          <p>Improved CI/CD pipelines and implemented secure Kubernetes clusters for data-critical applications.</p>
+        </div>
+      </div>
+      <!-- Job 4 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>Wipro Ltd.</h3>
+          <p><strong>Role:</strong> Senior Project Engineer</p>
+          <p><strong>Duration:</strong> 2019 - 2021</p>
+          <p>Developed cloud-native solutions and optimized deployments across Azure and AWS platforms.</p>
+        </div>
+      </div>
+      <!-- Job 5 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>Maheshwari Megaventures Ltd.</h3>
+          <p><strong>Role:</strong> Linux Administrator</p>
+          <p><strong>Duration:</strong> 2016 - 2019</p>
+          <p>Managed Linux systems and enhanced server performance through proactive monitoring and automation.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="timeline-content">
+          <h3>Startup</h3>
+          <p><strong>Role:</strong> Founder & CEO, CTO</p>
+          <p><strong>Duration:</strong> 2013 - 2016</p>
+          <p>Visionary Startup Founder, dynamic CEO, and innovative CTO driving transformative solutions through technology and leadership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="projects" id="projects">
+    <h2 class="projects-title">My Projects</h2>
+    <div class="projects-gallery">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="project1.png" alt="Project 1">
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="project2.jpg" alt="Project 2">
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="project3.jpeg" alt="Project 3">
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="project5.png" alt="Project 5">
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="project7.png" alt="Project 6">
+        </div>
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  </section>
+  
+  
 
   <footer>
-    <p>&copy; 2023 KarthikreddyGillela @ All rights reserved.</p>
+    <p>&copy; 2025 KarthikreddyGillela. All rights reserved.</p>
   </footer>
 
-  <!-- Load Font Awesome icons -->
+  <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
-
-  <!-- Load Font Awesome icons -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
   <script>
-    // Scroll to top button functionality
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        scrollToTopBtn.style.display = 'block';
-      } else {
-        scrollToTopBtn.style.display = 'none';
-      }
-    });
-
-    scrollToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
+    window.onscroll = () => scrollToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    scrollToTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const particlesContainer = document.querySelector('.particles');
-
-      function createRandomParticle() {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-
-        const size = Math.floor(Math.random() * 10) + 3; // Random size between 3px and 12px
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-
-        const color = getRandomColor();
-        particle.style.backgroundColor = color;
-
-        const randomTop = Math.random() * 100; // Random top position between 0 and 100%
-        const randomLeft = Math.random() * 100; // Random left position between 0 and 100%
-        particle.style.top = `${randomTop}%`;
-        particle.style.left = `${randomLeft}%`;
-
-        particlesContainer.appendChild(particle);
-      }
-
-      function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-      }
-
-      // Create 50 random particles on page load
-      for (let i = 0; i < 50; i++) {
-        createRandomParticle();
-      }
-    });
-
-    
-  </script>
-
 </body>
 
 </html>
