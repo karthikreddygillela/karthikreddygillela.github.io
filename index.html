@@ -66,14 +66,12 @@
   padding: 20px 40px;
   background: linear-gradient(135deg, #000000, #1a1a1a);
   color: #fff;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   position: fixed;
   width: 100%;
   z-index: 1000;
-  box-sizing: border-box; /* Ensures proper padding handling */
+  box-sizing: border-box;
 }
 
-/* Logo Styling */
 .logo h3 {
   font-size: 28px;
   color: #00FFFF;
@@ -81,11 +79,12 @@
   margin: 0;
 }
 
-/* Navigation Menu Styling */
+/* Navigation Menu */
 .nav-menu {
   display: flex;
   align-items: center;
   gap: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .nav-menu a {
@@ -104,18 +103,16 @@
   transform: scale(1.1);
 }
 
-/* Contact Button Styling */
 .contact-button {
   background: linear-gradient(45deg, #00FFFF, #FF69B4);
   color: #000;
   border: none;
-  padding: 12px 24px; /* Increased padding for better visibility */
+  padding: 10px 20px;
   border-radius: 12px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  white-space: nowrap; /* Prevents text wrapping */
 }
 
 .contact-button:hover {
@@ -123,29 +120,55 @@
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Adjust Header Height */
-.main-header {
-  height: auto; /* Ensures the height adjusts dynamically */
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hamburger-menu:focus {
+  outline: none;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .main-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+  .hamburger-menu {
+    display: block;
   }
 
   .nav-menu {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
+    background: #1a1a1a;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-200%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    text-align: center;
   }
 
   .contact-button {
-    align-self: flex-start;
-    margin-top: 10px; /* Add margin for better spacing on mobile */
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -258,6 +281,87 @@
     margin-bottom: 20px;
   }
 }
+
+/* What I Can Handle Section */
+.services {
+  padding: 60px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #00FFFF;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #FF69B4;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.service-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-card i {
+  font-size: 36px;
+  color: #FF69B4;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  color: #00FFFF;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+
 
 
 
@@ -634,6 +738,82 @@
   }
 }
 
+/* Learning Section */
+.learning {
+  padding: 60px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+.learning .section-title {
+  font-size: 36px;
+  color: #00FFFF;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.learning .section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #FF69B4;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.learning-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.learning-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.learning-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.learning-card h3 {
+  font-size: 20px;
+  color: #FF69B4;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.learning-card p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .learning-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+
+
+
 /* Footer Styling */
 .footer {
   background: #111;
@@ -759,16 +939,21 @@
     <div class="logo">
       <h3>G.K.R</h3>
     </div>
+    <button class="hamburger-menu" aria-label="Toggle Navigation">
+      <i class="fas fa-bars"></i>
+    </button>
     <nav class="nav-menu">
       <a href="#about">About Me</a>
       <a href="#skills">Skills</a>
+      <a href="#services">What I Can Handle</a>
       <a href="#work-history">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#upcoming-projects">Incubators</a>
+      <a href="#learning">Future</a>
       <button class="contact-button" onclick="window.open('https://www.linkedin.com/in/karthikreddygillela/')">Contact Me</button>
     </nav>
   </header>
-  
+    
   <section class="about" id="about">
     <div class="about-wrapper">
       <!-- Diagonal Background -->
@@ -792,8 +977,41 @@
     </div>
   </section>
   
-
-  
+  <section class="services" id="services">
+    <h2 class="section-title">What I Can Handle</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <i class="fas fa-server"></i>
+        <h3>Infrastructure Design</h3>
+        <p>Designing secure, scalable infrastructures for Big Data, Cloud, and on-premise systems.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-cogs"></i>
+        <h3>System Architecture</h3>
+        <p>Expertise in handling Low-Level Design (LLD) and High-Level Design (HLD) for scalable and efficient systems.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tools"></i>
+        <h3>DevSecOps</h3>
+        <p>Implementing CI/CD pipelines, automation, and security for software delivery workflows.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-brain"></i>
+        <h3>MLOps</h3>
+        <p>Streamlining ML model deployment, monitoring, and lifecycle management with AIOps tools.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud Solutions</h3>
+        <p>Building and managing cloud environments on AWS, Azure, and Google Cloud.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h3>Training and Mentorship</h3>
+        <p>Providing mentorship and hands-on training in DevSecOps, MLOps, and system architecture best practices.</p>
+      </div>
+    </div>
+  </section>    
 
   <section class="skills" id="skills">
     <h2 class="skills-title">Skills</h2>
@@ -998,6 +1216,28 @@
       </div>
     </div>
   </section>
+
+  <section class="learning" id="learning">
+    <h2 class="section-title">What I'm Learning</h2>
+    <div class="learning-container">
+      <div class="learning-card">
+        <h3>Quantum Computing</h3>
+        <p>Exploring quantum algorithms, qubit systems, and their potential to solve complex computational problems.</p>
+      </div>
+      <div class="learning-card">
+        <h3>Cognitive and Neuroscience</h3>
+        <p>Diving into the intersection of AI and neuroscience to better understand how humans think and learn.</p>
+      </div>
+      <div class="learning-card">
+        <h3>Generative AI and LLMs</h3>
+        <p>Investigating the future of large language models, generative AI applications, and their ethical implications.</p>
+      </div>
+      <div class="learning-card">
+        <h3>Blockchain Technology</h3>
+        <p>Understanding the role of decentralized systems in secure, transparent, and scalable applications.</p>
+      </div>
+    </div>
+  </section>
   
 
   <footer class="footer">
@@ -1008,9 +1248,12 @@
         <ul>
           <li><a href="#about">About Me</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">What I Can Handle</a></li>
           <li><a href="#work-history">Experience</a></li>
-          <li><a href="#upcoming-projects">Incubators</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#upcoming-projects">Incubators</a></li>
+          <li><a href="#learning">Future</a></li>
+          
         </ul>
       </div>
   
@@ -1042,6 +1285,16 @@
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     window.onscroll = () => scrollToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
     scrollToTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    // Toggle visibility of navigation menu on click
+    hamburgerMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  });
   </script>
 </body>
 
