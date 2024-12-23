@@ -935,40 +935,138 @@
 }
 
 
-    /* Scroll to Top Button */
-    #scrollToTopBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #FF69B4;
-      color: #000;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      font-size: 24px;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.3s ease;
-    }
+/* Scroll to Top Button */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px; /* Adjusted to sit above the summary button */
+  right: 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
 
-    #scrollToTopBtn:hover {
-      background: #00FFFF;
-    }
+  /* Flexbox for centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
+#scrollToTopBtn i {
+  margin: 0; /* Remove any margin to perfectly center */
+}
 
-      .image-gallery {
-        justify-content: center;
-      }
-    }
+
+#scrollToTopBtn:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Busy Summary Button */
+.summary-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #00FFFF, #FF69B4);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.summary-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Summary Overlay */
+.summary-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  z-index: 1001;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-overlay.active {
+  display: flex;
+  animation: fadeIn 0.5s ease;
+}
+
+.summary-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.summary-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #00FFFF;
+}
+
+.summary-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.summary-content ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #eaeaea;
+}
+
+.close-summary {
+  background: #FF69B4;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.close-summary:hover {
+  background: #FF1493;
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
   </style>
 </head>
@@ -1015,6 +1113,20 @@
       </div>
     </div>
   </section>
+
+<!-- Summary Overlay -->
+<div class="summary-overlay" id="summary-overlay">
+  <div class="summary-content">
+    <h2>Quick Summary</h2>
+    <ul>
+      <li><strong>Who I Am:</strong> A seasoned DevSecOps Architect and System Design Expert.</li>
+      <li><strong>What I Did:</strong> Built scalable, secure infrastructures; led DevOps and MLOps initiatives; explored emerging tech.</li>
+      <li><strong>What I Can Do:</strong> Handle end-to-end system design, DevOps pipelines, cloud migrations, and AI-driven solutions.</li>
+    </ul>
+    <button class="close-summary" onclick="toggleSummary()">Close</button>
+  </div>
+</div>
+
   
   <section class="services" id="services">
     <h2 class="section-title">What I Can Handle</h2>
@@ -1044,6 +1156,23 @@
         <h3>Cloud Solutions</h3>
         <p>Building and managing cloud environments on AWS, Azure, and Google Cloud.</p>
       </div>
+      <div class="service-card">
+        <i class="fas fa-globe"></i>
+        <h3>Web Application Development</h3>
+        <p>
+          Proficient in designing and developing scalable web applications using Django, leveraging Generative AI tools like ChatGPT and Claude AI for prompt engineering and intelligent automation.
+        </p>
+      </div>
+      
+
+      <div class="service-card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Application Development</h3>
+        <p>
+          Expertise in building mobile applications using flutter, enhanced with Generative AI tools for prompt engineering and intelligent workflows.
+        </p>
+      </div>
+      
       <div class="service-card">
         <i class="fas fa-chalkboard-teacher"></i>
         <h3>Training and Mentorship</h3>
@@ -1318,7 +1447,16 @@
   </footer>
   
 
-  <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+ <!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" title="Go to top" onclick="scrollToTop()">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Busy? Click for a Summary Button -->
+<div class="summary-button">
+  <span>Busy? Click for a Summary!</span>
+</div>
+
 
   <script>
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
@@ -1334,6 +1472,15 @@
       navMenu.classList.toggle('active');
     });
   });
+  // Toggle Summary Overlay
+function toggleSummary() {
+  const overlay = document.getElementById('summary-overlay');
+  overlay.classList.toggle('active');
+}
+
+// Add Event Listener for Button
+document.querySelector('.summary-button').addEventListener('click', toggleSummary);
+
   </script>
 </body>
 
